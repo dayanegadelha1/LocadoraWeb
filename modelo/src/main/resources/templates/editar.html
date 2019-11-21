@@ -1,0 +1,17 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Editar</title>
+<meta charset="utf-8">
+</head>
+<body>
+<form th:object="${dados}" method="POST" action="/salvar">	
+		<label>Nome:</label>
+		<input type="text" th:field="*{id}" readonly="readonly">
+		<label>Filme:</label>
+		<input type="text" th:field="*{titulo}">
+		<input type="text" th:field="*{nome}">
+		<input type="submit" value="Editar">
+</form>
+</body>
+</html>
