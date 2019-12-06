@@ -32,7 +32,7 @@ public class HomeController {
 	public String salvar(Cliente cliente) {		
 		
 		crud.save(cliente);
-		return "/index";
+		return "redirect:/";
 		
 	}
 	@GetMapping("/delete/{id}")
