@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Editar</title>
+ <style type="text/css">
+ 	body{
+ 		background-image:url("../filmes.png");
+		background-size:cover;
+		background-repeat:no-repeat;
+		text-align:center;
+ 		
+ 	}
+ 	form{
+ 		display:inline-block;
+ 	}
+ 	h1{
+ 		color:white;
+ 	}
+ </style>
+<meta charset="utf-8">
+</head>
+<body>
+<form th:object="${dados}" method="POST" action="/salvar">	
+		<h1>Codigo:</h1>
+		<input type="text" th:field="*{id}" readonly="readonly"><br>
+		<h1>Filme:</h1>
+		<input type="text" th:field="*{titulo}"><br>
+		<h1>Nome:</h1>
+		<input type="text" th:field="*{nome}"><br>
+		<br>
+		<input type="submit" value="Editar">
+</form>
+</body>
+</html>
