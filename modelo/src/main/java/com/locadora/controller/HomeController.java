@@ -28,11 +28,11 @@ public class HomeController {
 		
 	}
 	
-	@PostMapping("/salvar")
+	@GetMapping("/salvar")
 	public String salvar(Cliente cliente) {		
 		
 		crud.save(cliente);
-		return "redirect:/";
+		return "/index";
 		
 	}
 	@GetMapping("/delete/{id}")
